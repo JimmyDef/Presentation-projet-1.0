@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "hhenumregular";
+  src: url("/public/polices/hhenum-regular-webfont.eot");
+  src: url("/public/polices/hhenum-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/public/polices/hhenum-regular-webfont.woff2") format("woff2"), url("/public/polices/hhenum-regular-webfont.woff") format("woff"), url("/public/polices/hhenum-regular-webfont.ttf") format("truetype"), url("/public/polices/hhenum-regular-webfont.svg#hhenumregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "hhenumregular";
+  font-size: 50px;
+}
+
+h1 {
+  font-size: 100px;
+  color: white;
+}
+
+header {
+  position: relative;
+  height: 275px;
+  width: 100%;
+  background: #7451eb;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 130px;
+  height: 120px;
+  background-color: white;
+}
+.logo__cercle {
+  background-color: #7451eb;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+}
+.logo__demicercle {
+  background-color: #7451eb;
+  border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: -50px;
+}
+
+@media screen and (max-width: 573px) {
+  .logo {
+    right: 10px;
+    width: 65px;
+    height: 60px;
+  }
+  .logo__cercle {
+    width: 25px;
+    height: 25px;
+    top: 5px;
+  }
+  .logo__demicercle {
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+  }
+}
+.intro {
+  margin-top: 40px;
+  border: 2px black solid;
+  text-align: center;
+}
+.chargement {
+  animation: chargement 1s 5s forwards;
+}
+
+.loading {
+  height: 20vh;
+  width: 20vh;
+  border: black 5px;
+  border-left-style: dotted;
+  border-right-style: dotted;
+  border-bottom-style: dashed;
+  border-top-style: dashed;
+  border-radius: 50%;
+  animation: rotation-cercle 5 2s alternate ease-in;
+}
+.loading__cercle {
+  background-color: #7451eb;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  animation: scale-cercle 8 2s alternate;
+}
+
+@keyframes rotation-cercle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale-cercle {
+  0% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+@keyframes chargement {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+{
+  "name": "projet-v",
+  "version": "1.0.0",
+  "description": "jimmyDef's web portfolio",
+  "main": "index.js",
+  "scripts": {
+  "sass": "sass --watch ./sass/style.scss:./public/css/style.css ",
+  "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+  }

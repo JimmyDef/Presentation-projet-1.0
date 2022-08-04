@@ -1,0 +1,52 @@
+header {
+    position: relative;
+    height: 275px;
+    width: 100%;
+    background: #7451eb ;
+    
+    padding-top: 50px;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: $logo-width;
+    height: $logo-height;
+    background-color: white;
+    &__cercle {
+        @include logo;
+        width: $logo-cercle-width;
+        height: $logo-cercle-height;
+        top: $logo-cercle-top;
+    }
+    &__demicercle {
+        @include logo;
+        width: $logo-demicercle-width;
+        height: $logo-demicercle-height;
+        bottom: $logo-demicercle-bottom;
+    }
+}
+@media screen and (max-width: 573px) {
+    .logo {
+        right: 10px;
+        width: $logo-width/2;
+        height: $logo-height/2;
+        &__cercle {
+            width: $logo-cercle-width/2;
+            height: $logo-cercle-height/2;
+            top: $logo-cercle-top/2;
+        }
+        &__demicercle {
+            width: $logo-demicercle-width/2;
+            height: $logo-demicercle-height/2;
+            bottom: $logo-demicercle-bottom/2;
+        }
+    }
+
+}
+
