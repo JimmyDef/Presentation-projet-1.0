@@ -1,0 +1,52 @@
+.card-profil {
+    // position: relative;
+    text-align: center;
+    width: 40%;
+    // height: 50%;
+    margin: 60px auto;
+    // border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: 2px 2px 2px grey;
+}
+
+img {
+    border: 2px black solid;
+    box-shadow: 4px 4px 4px grey;
+}
+
+main h1 {
+    text-align: center;
+    margin: 20px;
+    text-decoration : underline;
+}
+
+.card-cryo {
+    margin-top: 20px;
+    
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    &__comp {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.progress {
+    width: 300px;
+    height: 30px;
+    border: 2px solid black;
+    margin: 40px;
+    padding: 4px;
+    &__bar {
+        width: 100%;
+        height: 100%;
+        // transform: scaleX(0);
+        transform-origin: left;
+        background: $color-gradient;
+        animation: progress-bar 2s 1s infinite;
+    }
+}
