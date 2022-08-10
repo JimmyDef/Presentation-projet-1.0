@@ -1,68 +1,38 @@
-.intro {
-margin-top: 40px;
-    border: 2px black solid;
+a  {
+    text-decoration: none;
+}
+.intro {    
+    margin-top: 20px;
+    // border: 2px black solid;
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__alerte {
-      
-
+      margin-top: 20px;
+      font-size: 70px;
+      text-shadow: 2px 2px 2px #CE5937;
+      animation: alerte  both 1s 6s;
     }
     &__fluctu {
-
+        margin-top: 20px;
+        text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
+        animation: alerte  both 1s 7.3s;
     }
     &__agent {
-
+        margin-top: 20px;
+        text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
+        animation: alerte  both 1s 9s;
     }
 }
-.chargement {
-    animation: chargement 1s 5s forwards;
-}
 
-.loading {
-    height: 20vh;
-    width: 20vh;
-    border:  black 5px;
-    border-left-style: dotted;
-    border-right-style: dotted;
-    border-bottom-style:dashed;
-    border-top-style:dashed;
-    border-radius: 50%;
-    animation: rotation-cercle 5 2s   alternate ease-in;
-    &__cercle {
-        background-color: $colour-primary;
-        border-radius: 50%;
-        height: 100%;
+@media screen and (max-width: 573px) {
+    .card {
         width: 100%;
-        animation: scale-cercle 8 2s alternate ;
-    }
-
-}
-
-@keyframes rotation-cercle {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-@keyframes scale-cercle {
-    0% {
-        transform: scale(0.2);
-    }
-    50% {
-        transform: scale(0.5);
-    }
-    100% {
-        transform: scale(0.95);
-    }
-}
-
-@keyframes chargement {
-    0% {
-        transform: scale(1)
-    }
-    100% {
-        transform: scale(0)
+        // justify-content: space-between;
+        }
+    
+    img {
+        width: 30%;
     }
 }

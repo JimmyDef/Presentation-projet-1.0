@@ -1,0 +1,30 @@
+.loading {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: scale(1);
+    align-items: center;
+    animation: chargement 0.8s 5.37s forwards;
+    &__cercle {
+        height: 100%;
+        width: 100%;
+        border:  black 5px;
+        border-left-style: dotted;
+        border-right-style: dotted;
+        border-bottom-style:dashed;
+        border-top-style:dashed;
+        border-radius: 50%;
+        animation: rotation-cercle infinite 2s   alternate ease-in;
+        &--pupille {
+            @include animated-background;
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            animation: scale-cercle 3 1.8s alternate forwards;
+        }
+    }
+}

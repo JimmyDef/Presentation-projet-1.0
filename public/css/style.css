@@ -1,3 +1,68 @@
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes rotation-cercle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale-cercle {
+  0% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+@keyframes chargement {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes alerte {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *::after,
 *::before {
@@ -18,18 +83,92 @@ body {
   font-size: 50px;
 }
 
-h1 {
+header h1 {
   font-size: 100px;
   color: white;
+}
+
+button {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 20px;
+}
+
+button {
+  margin-top: 50px;
+  height: 50px;
+  width: 280px;
+  border-radius: 20px;
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  box-shadow: 5px 5px 15px 5px #000000;
+  transition: font-size 200ms;
+  animation: alerte both 1s 11.5s;
+}
+button:hover {
+  font-size: 22px;
+  background-size: 180% 180%;
+  box-shadow: 2px 2px 10px 3px #000000;
+}
+button:active {
+  box-shadow: 5px 5px 15px 5px #CE5937;
+}
+
+@media screen and (max-width: 573px) {
+  button {
+    margin-top: 20px;
+    height: 15vw;
+    width: 60vw;
+    padding: 0 10px;
+  }
+}
+.loading {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: scale(1);
+  align-items: center;
+  animation: chargement 0.8s 5.37s forwards;
+}
+.loading__cercle {
+  height: 100%;
+  width: 100%;
+  border: black 5px;
+  border-left-style: dotted;
+  border-right-style: dotted;
+  border-bottom-style: dashed;
+  border-top-style: dashed;
+  border-radius: 50%;
+  animation: rotation-cercle infinite 2s alternate ease-in;
+}
+.loading__cercle--pupille {
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  animation: scale-cercle 3 1.8s alternate forwards;
 }
 
 header {
   position: relative;
   height: 275px;
   width: 100%;
-  background: #7451eb;
   padding-top: 50px;
   text-align: center;
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
 }
 
 .logo {
@@ -44,7 +183,9 @@ header {
   background-color: white;
 }
 .logo__cercle {
-  background-color: #7451eb;
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
   border-radius: 50%;
   position: absolute;
   width: 50px;
@@ -52,7 +193,9 @@ header {
   top: 10px;
 }
 .logo__demicercle {
-  background-color: #7451eb;
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
   border-radius: 50%;
   position: absolute;
   width: 100px;
@@ -77,60 +220,88 @@ header {
     bottom: -25px;
   }
 }
+a {
+  text-decoration: none;
+}
+
 .intro {
-  margin-top: 40px;
-  border: 2px black solid;
+  margin-top: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.chargement {
-  animation: chargement 1s 5s forwards;
+.intro__alerte {
+  margin-top: 20px;
+  font-size: 70px;
+  text-shadow: 2px 2px 2px #CE5937;
+  animation: alerte both 1s 6s;
+}
+.intro__fluctu {
+  margin-top: 20px;
+  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
+  animation: alerte both 1s 7.3s;
+}
+.intro__agent {
+  margin-top: 20px;
+  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
+  animation: alerte both 1s 9s;
 }
 
-.loading {
-  height: 20vh;
-  width: 20vh;
-  border: black 5px;
-  border-left-style: dotted;
-  border-right-style: dotted;
-  border-bottom-style: dashed;
-  border-top-style: dashed;
-  border-radius: 50%;
-  animation: rotation-cercle 5 2s alternate ease-in;
+@media screen and (max-width: 573px) {
+  .card {
+    width: 100%;
+  }
+  img {
+    width: 30%;
+  }
 }
-.loading__cercle {
-  background-color: #7451eb;
-  border-radius: 50%;
-  height: 100%;
+.card-profil {
+  text-align: center;
+  width: 40%;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-shadow: 2px 2px 2px grey;
+}
+
+img {
+  border: 2px black solid;
+  box-shadow: 4px 4px 4px grey;
+}
+
+main h1 {
+  text-align: center;
+  margin: 20px;
+  text-decoration: underline;
+}
+
+.card-cryo {
+  margin-top: 20px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.card-cryo__comp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress {
+  width: 300px;
+  height: 30px;
+  border: 2px solid black;
+  margin: 40px;
+  padding: 4px;
+}
+.progress__bar {
   width: 100%;
-  animation: scale-cercle 8 2s alternate;
-}
-
-@keyframes rotation-cercle {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes scale-cercle {
-  0% {
-    transform: scale(0.2);
-  }
-  50% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(0.95);
-  }
-}
-@keyframes chargement {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
+  height: 100%;
+  transform-origin: left;
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  animation: progress-bar 2s 1s infinite;
 }
 
 /*# sourceMappingURL=style.css.map */

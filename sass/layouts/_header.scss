@@ -2,12 +2,11 @@ header {
     position: relative;
     height: 275px;
     width: 100%;
-    background: #7451eb ;
-    
     padding-top: 50px;
     text-align: center;
-}
-
+    @include animated-background;
+      }
+    
 .logo {
     position: absolute;
     bottom: 0;

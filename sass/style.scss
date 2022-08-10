@@ -1,17 +1,20 @@
 @import "./utils/variables";	
 @import "./utils/functions";	
 @import "./utils/mixins";	
+@import "./utils/keyframes";	
 
 @import "./base/base";	
 @import "./base/fonts";	
+@import "./base/typography";
 
-@import "./base/typography";	
 @import "./components/buttons";	
+@import "./components/loading-eye";	
+
 @import "./layouts/header";	
 @import "./layouts/main";	
 @import "./layouts/nav";	
 @import "./layouts/container";	
 	
-// @import "./pages/work";	
+@import "./pages/profil";	
 // @import "./pages/about";	
 // @import "./pages/project";

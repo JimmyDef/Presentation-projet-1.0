@@ -1,7 +1,12 @@
 @mixin logo {
-    background-color: $colour-primary;
+    @include animated-background;
     border-radius: 50%;
     position: absolute;
     
+}
+@mixin animated-background {
+    background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
 }
 
