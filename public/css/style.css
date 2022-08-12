@@ -39,7 +39,7 @@
     transform: scale(0);
   }
 }
-@keyframes alerte {
+@keyframes scaling {
   0% {
     transform: scale(0);
   }
@@ -47,12 +47,52 @@
     transform: scale(1);
   }
 }
-@keyframes progress-bar {
+@keyframes progress-bar-1 {
   0% {
     transform: scaleX(0);
   }
+  50% {
+    transform: scaleX(0.2);
+  }
+  98% {
+    background: orange;
+  }
   100% {
     transform: scaleX(1);
+    background: rgb(39, 230, 39);
+  }
+}
+@keyframes progress-bar-2 {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(0.35);
+  }
+  99% {
+    background: orange;
+  }
+  100% {
+    transform: scaleX(1);
+    background: rgb(16, 219, 16);
+  }
+}
+@keyframes progress-bar-3 {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(0.5);
+  }
+  90% {
+    transform: scaleX(0.6);
+  }
+  99% {
+    background: orange;
+  }
+  100% {
+    transform: scaleX(0.2);
+    background: red;
   }
 }
 @keyframes btn {
@@ -61,6 +101,14 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes transY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1000);
   }
 }
 *,
@@ -100,6 +148,14 @@ h1 {
   margin: 20px;
 }
 
+.card-cryo__comp {
+  font-size: 35px;
+}
+
+p span {
+  text-decoration: underline;
+}
+
 button {
   margin-top: 50px;
   height: 50px;
@@ -108,7 +164,6 @@ button {
   background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
   box-shadow: 5px 5px 15px 5px #000000;
   transition: font-size 200ms;
-  animation: alerte both 1s 11.5s;
 }
 button:hover {
   font-size: 22px;
@@ -117,6 +172,13 @@ button:hover {
 }
 button:active {
   box-shadow: 5px 5px 15px 5px #CE5937;
+}
+
+.btn--profil {
+  animation: scaling both 1s 11.5s;
+}
+.btn--contact {
+  animation: scaling both 1s 30s;
 }
 
 @media screen and (max-width: 573px) {
@@ -131,7 +193,7 @@ button:active {
   height: 200px;
   width: 200px;
   position: absolute;
-  top: 50%;
+  top: 120px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -163,7 +225,6 @@ button:active {
 header {
   position: relative;
   height: 275px;
-  width: 100%;
   padding-top: 50px;
   text-align: center;
   background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
@@ -203,7 +264,7 @@ header {
   bottom: -50px;
 }
 
-@media screen and (max-width: 573px) {
+@media screen and (max-width: 630px) {
   .logo {
     right: 10px;
     width: 65px;
@@ -226,6 +287,7 @@ a {
 
 .intro {
   margin-top: 20px;
+  border: 2px black solid;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -235,73 +297,131 @@ a {
   margin-top: 20px;
   font-size: 70px;
   text-shadow: 2px 2px 2px #CE5937;
-  animation: alerte both 1s 6s;
+  animation: scaling both 1s 6s;
 }
 .intro__fluctu {
   margin-top: 20px;
   text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
-  animation: alerte both 1s 7.3s;
+  animation: scaling both 1s 7.3s;
 }
 .intro__agent {
   margin-top: 20px;
   text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
-  animation: alerte both 1s 9s;
+  animation: scaling both 1s 9s;
 }
 
 @media screen and (max-width: 573px) {
-  .card {
-    width: 100%;
-  }
   img {
     width: 30%;
   }
 }
-.card-profil {
-  text-align: center;
-  width: 40%;
-  margin: 60px auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-shadow: 2px 2px 2px grey;
-}
-
-img {
-  border: 2px black solid;
-  box-shadow: 4px 4px 4px grey;
+main {
+  position: relative;
 }
 
 main h1 {
   text-align: center;
   margin: 20px;
   text-decoration: underline;
+  animation: scaling both 1s 6s;
+}
+
+.profile-selected {
+  animation: scaling reverse 1s 9.5s both;
+}
+
+.card-profil {
+  text-align: center;
+  width: 500px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-shadow: 2px 2px 2px grey;
+  animation: scaling both 1s 7s;
+}
+.card-profil img {
+  border: 2px black solid;
+  box-shadow: 4px 4px 4px grey;
 }
 
 .card-cryo {
-  margin-top: 20px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
   text-align: center;
-  width: 60%;
+  width: 500px;
   margin: 0 auto;
+  animation: scaling reverse 1s 25s both;
 }
 .card-cryo__comp {
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  animation: scaling both 1s 14s;
+}
+.card-cryo--stase {
+  animation: scaling both 1s 11s;
+}
+.card-cryo--comp {
+  animation: scaling both 1s 13s;
+}
+.card-cryo p {
+  margin-bottom: 35px;
+  text-shadow: 1px 6px 6px rgba(31, 232, 247, 0.849);
 }
 
 .progress {
-  width: 300px;
+  width: 350px;
   height: 30px;
   border: 2px solid black;
-  margin: 40px;
+  animation: scaling both 1s 8.7s;
   padding: 4px;
 }
 .progress__bar {
   width: 100%;
   height: 100%;
   transform-origin: left;
-  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
-  animation: progress-bar 2s 1s infinite;
+  background: orange;
+}
+.progress__bar--html {
+  animation: progress-bar-1 2.5s 15s both cubic-bezier(0.72, 1.53, 0.92, 0.42);
+}
+.progress__bar--css {
+  animation: progress-bar-2 3s 17s both cubic-bezier(0.69, 0.51, 0.89, -0.67);
+}
+.progress__bar--js {
+  animation: progress-bar-3 4s 19s both;
+}
+
+.card-error {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-error__neuro {
+  margin-top: 20px;
+  font-size: 70px;
+  text-shadow: 2px 2px 2px #CE5937;
+  animation: scaling both 1s 26s;
+}
+.card-error__forma {
+  margin-top: 20px;
+  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
+  animation: scaling both 1s 27s;
+}
+.card-error__envoie {
+  margin-top: 20px;
+  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
+  animation: scaling both 1s 28.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

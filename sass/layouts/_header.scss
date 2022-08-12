@@ -1,7 +1,7 @@
 header {
     position: relative;
     height: 275px;
-    width: 100%;
+    // width: 100%;
     padding-top: 50px;
     text-align: center;
     @include animated-background;
@@ -30,7 +30,7 @@ header {
         bottom: $logo-demicercle-bottom;
     }
 }
-@media screen and (max-width: 573px) {
+@media screen and (max-width: 630px) {
     .logo {
         right: 10px;
         width: $logo-width/2;

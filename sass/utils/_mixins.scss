@@ -10,3 +10,6 @@
     animation: gradient-animation 10s ease infinite;
 }
 
+@mixin scaling-animation($scaling-delay){
+     animation: scaling  both 1s $scaling-delay;
+    }

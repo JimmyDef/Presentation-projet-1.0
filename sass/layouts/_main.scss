@@ -3,7 +3,7 @@ a  {
 }
 .intro {    
     margin-top: 20px;
-    // border: 2px black solid;
+    border: 2px black solid;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -12,25 +12,25 @@ a  {
       margin-top: 20px;
       font-size: 70px;
       text-shadow: 2px 2px 2px #CE5937;
-      animation: alerte  both 1s 6s;
+      animation: scaling  both 1s 6s;
     }
     &__fluctu {
         margin-top: 20px;
         text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
-        animation: alerte  both 1s 7.3s;
+        animation: scaling   both 1s 7.3s;
     }
     &__agent {
         margin-top: 20px;
         text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
-        animation: alerte  both 1s 9s;
+        animation: scaling   both 1s 9s;
     }
 }
 
 @media screen and (max-width: 573px) {
-    .card {
-        width: 100%;
-        // justify-content: space-between;
-        }
+    // .card {
+    //     width: 100%;
+    //     // justify-content: space-between;
+    //     }
     
     img {
         width: 30%;

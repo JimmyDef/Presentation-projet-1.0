@@ -1,7 +1,22 @@
-.card-profil {
-    // position: relative;
+main {
+    position: relative;
+}
+
+main h1 {
+    
     text-align: center;
-    width: 40%;
+    margin: 20px;
+    text-decoration : underline;
+    animation:  scaling   both 1s 6s;
+}
+.profile-selected {
+    animation: scaling reverse 1s 9.5s both;
+    
+}
+.card-profil {
+    
+    text-align: center;
+    width: 500px;
     // height: 50%;
     margin: 60px auto;
     // border: 2px solid black;
@@ -9,44 +24,91 @@
     justify-content: space-around;
     align-items: center;
     text-shadow: 2px 2px 2px grey;
-}
-
-img {
-    border: 2px black solid;
-    box-shadow: 4px 4px 4px grey;
-}
-
-main h1 {
-    text-align: center;
-    margin: 20px;
-    text-decoration : underline;
+    animation:  scaling  both 1s 7s;
+    
+    img {
+        border: 2px black solid;
+        box-shadow: 4px 4px 4px grey;
+    }
 }
 
 .card-cryo {
-    margin-top: 20px;
     
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
     text-align: center;
-    width: 60%;
-    margin: 0 auto;
+    width: 500px;
+    margin: 0  auto ;
+    animation: scaling reverse 1s 25s both;
     &__comp {
+        // border: 1px solid green;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        animation: scaling  both 1s 14s;
+    }
+    &--stase {
+        animation: scaling  both 1s 11s;
+    }
+    &--comp {
+        animation: scaling  both 1s 13s;
+    }
+    p {
+        margin-bottom: 35px;
+        text-shadow: 1px 6px 6px rgba(31, 232, 247, 0.849);
     }
 }
 
 .progress {
-    width: 300px;
+    // min-width: 300px;
+    width: 350px;
     height: 30px;
     border: 2px solid black;
-    margin: 40px;
+    animation: scaling  both 1s 8.7s;
     padding: 4px;
     &__bar {
         width: 100%;
         height: 100%;
-        // transform: scaleX(0);
         transform-origin: left;
-        background: $color-gradient;
-        animation: progress-bar 2s 1s infinite;
+        background: orange;
+        &--html {
+            animation: progress-bar-1 2.5s 15s both cubic-bezier(.72,1.53,.92,.42);
+        }
+        &--css {
+            animation: progress-bar-2 3s 17s both cubic-bezier(.69,.51,.89,-0.67);
+        }
+        &--js {
+            animation: progress-bar-3 4s 19s  both;
+        }
+    }
+}
+.card-error {    
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__neuro {
+      margin-top: 20px;
+      font-size: 70px;
+      text-shadow: 2px 2px 2px #CE5937;
+      animation: scaling   both 1s 26s;
+    }
+    &__forma {
+        margin-top: 20px;
+        text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
+        animation: scaling  both 1s 27s;
+    }
+    &__envoie {
+        margin-top: 20px;
+        text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
+        animation: scaling   both 1s 28.3s;
     }
 }
