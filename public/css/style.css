@@ -142,7 +142,7 @@ button {
   font-weight: bold;
 }
 
-h1 {
+h2 {
   text-align: center;
   font-size: 50px;
   margin: 20px;
@@ -154,6 +154,10 @@ h1 {
 
 p span {
   text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -179,6 +183,9 @@ button:active {
 }
 .btn--contact {
   animation: scaling both 1s 30s;
+}
+.btn--again {
+  animation: scaling both 1s 3s;
 }
 
 @media screen and (max-width: 573px) {
@@ -281,32 +288,26 @@ header {
     bottom: -25px;
   }
 }
-a {
-  text-decoration: none;
-}
-
-.intro {
+.opening {
   margin-top: 20px;
-  border: 2px black solid;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.intro__alerte {
+.opening__intro {
   margin-top: 20px;
+  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
+}
+.opening__intro--alerte {
+  animation: scaling both 1s 6s;
   font-size: 70px;
   text-shadow: 2px 2px 2px #CE5937;
-  animation: scaling both 1s 6s;
 }
-.intro__fluctu {
-  margin-top: 20px;
-  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
+.opening__intro--fluctu {
   animation: scaling both 1s 7.3s;
 }
-.intro__agent {
-  margin-top: 20px;
-  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
+.opening__intro--agent {
   animation: scaling both 1s 9s;
 }
 
@@ -318,19 +319,19 @@ a {
 main {
   position: relative;
 }
-
-main h1 {
+main h2.h-profil {
+  animation: scaling both 1s 6s;
   text-align: center;
   margin: 20px;
   text-decoration: underline;
-  animation: scaling both 1s 6s;
 }
 
 .profile-selected {
-  animation: scaling reverse 1s 9.5s both;
+  animation: scaling reverse both 1s 9.5s;
 }
 
 .card-profil {
+  animation: scaling both 1s 7s;
   text-align: center;
   width: 500px;
   margin: 60px auto;
@@ -338,7 +339,6 @@ main h1 {
   justify-content: space-around;
   align-items: center;
   text-shadow: 2px 2px 2px grey;
-  animation: scaling both 1s 7s;
 }
 .card-profil img {
   border: 2px black solid;
@@ -346,21 +346,21 @@ main h1 {
 }
 
 .card-cryo {
+  animation: scaling reverse both 1s 23.5s;
   position: absolute;
+  margin: 0 auto;
   top: 20px;
   right: 0;
   left: 0;
   text-align: center;
   width: 500px;
-  margin: 0 auto;
-  animation: scaling reverse 1s 25s both;
 }
 .card-cryo__comp {
+  animation: scaling both 1s 14s;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  animation: scaling both 1s 14s;
 }
 .card-cryo--stase {
   animation: scaling both 1s 11s;
@@ -374,10 +374,10 @@ main h1 {
 }
 
 .progress {
-  width: 350px;
+  animation: scaling both 1s 8.7s;
+  width: 330px;
   height: 30px;
   border: 2px solid black;
-  animation: scaling both 1s 8.7s;
   padding: 4px;
 }
 .progress__bar {
@@ -397,31 +397,64 @@ main h1 {
 }
 
 .card-error {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 20px;
   right: 0;
   left: 0;
+  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
+}
+.card-error__neuro {
+  animation: scaling both 1s 25s;
+  font-size: 70px;
+  text-shadow: 2px 2px 2px #CE5937;
+}
+.card-error__forma {
+  animation: scaling both 1s 26.3s;
+}
+.card-error__envoie {
+  animation: scaling both 1s 28s;
+}
+
+p {
   margin-top: 20px;
+}
+
+#contact {
+  position: relative;
+}
+
+h2.contact {
+  animation: scaling both 1s 0.4s;
+  text-align: center;
+  margin: 20px;
+  text-decoration: underline;
+}
+
+.about-me {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.card-error__neuro {
-  margin-top: 20px;
-  font-size: 70px;
-  text-shadow: 2px 2px 2px #CE5937;
-  animation: scaling both 1s 26s;
+
+.card-contact {
+  animation: scaling both 1s 1s;
+  text-align: center;
+  width: 600px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-shadow: 2px 2px 2px grey;
 }
-.card-error__forma {
-  margin-top: 20px;
-  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
-  animation: scaling both 1s 27s;
-}
-.card-error__envoie {
-  margin-top: 20px;
-  text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
-  animation: scaling both 1s 28.3s;
+.card-contact img {
+  border: 2px black solid;
+  box-shadow: 4px 4px 4px grey;
 }
 
 /*# sourceMappingURL=style.css.map */

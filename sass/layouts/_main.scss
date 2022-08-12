@@ -1,29 +1,23 @@
-a  {
-    text-decoration: none;
-}
-.intro {    
+
+.opening {    
     margin-top: 20px;
-    border: 2px black solid;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &__alerte {
-      margin-top: 20px;
-      font-size: 70px;
-      text-shadow: 2px 2px 2px #CE5937;
-      animation: scaling  both 1s 6s;
-    }
-    &__fluctu {
+    @include display-card;
+    &__intro{
         margin-top: 20px;
-        text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
-        animation: scaling   both 1s 7.3s;
-    }
-    &__agent {
-        margin-top: 20px;
-        text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
-        animation: scaling   both 1s 9s;
-    }
+        text-shadow: 1px 6px 6px $colour-hot-light;
+        &--alerte {
+            @include scaling-animation(6s);
+            font-size: 70px;
+            text-shadow: 2px 2px 2px $colour-hot;
+        }
+        &--fluctu {
+            @include scaling-animation(7.3s);
+        }
+        &--agent {
+
+            @include scaling-animation(9s);
+        }
+}
 }
 
 @media screen and (max-width: 573px) {

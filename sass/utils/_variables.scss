@@ -1,7 +1,8 @@
 $colour-primary: #7451eb;
 $color-gradient: linear-gradient(300deg,deepskyblue,darkviolet,blue);
-$colour-secondary: #D8CEF9;
-
+$colour-hot: #CE5937;
+$colour-hot-light:rgba(195,81,81,0.6);
+$colour-cold:rgba(31, 232, 247, 0.849);
 
 $logo-width: 130px;
 $logo-height: 120px;
@@ -13,4 +14,5 @@ $logo-cercle-top: 10px;
 $logo-demicercle-width: 100px;
 $logo-demicercle-height: 100px;
 $logo-demicercle-bottom: -50px;
+
 

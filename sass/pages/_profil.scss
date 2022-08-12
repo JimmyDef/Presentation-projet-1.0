@@ -1,31 +1,28 @@
 main {
     position: relative;
+    h2.h-profil {
+        
+        @include scaling-animation(6s);
+        text-align: center;
+        margin: 20px;
+        text-decoration : underline;
+    
+} 
 }
 
-main h1 {
-    
-    text-align: center;
-    margin: 20px;
-    text-decoration : underline;
-    animation:  scaling   both 1s 6s;
-}
 .profile-selected {
-    animation: scaling reverse 1s 9.5s both;
+    @include scaling-reverse(9.5s);
     
 }
-.card-profil {
-    
+.card-profil { 
+    @include scaling-animation(7s);
     text-align: center;
     width: 500px;
-    // height: 50%;
     margin: 60px auto;
-    // border: 2px solid black;
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-shadow: 2px 2px 2px grey;
-    animation:  scaling  both 1s 7s;
-    
     img {
         border: 2px black solid;
         box-shadow: 4px 4px 4px grey;
@@ -33,28 +30,27 @@ main h1 {
 }
 
 .card-cryo {
-    
+    @include scaling-reverse(23.5s);
     position: absolute;
+    margin: 0  auto ;
     top: 20px;
     right: 0;
     left: 0;
     text-align: center;
     width: 500px;
-    margin: 0  auto ;
-    animation: scaling reverse 1s 25s both;
     &__comp {
-        // border: 1px solid green;
+        @include scaling-animation(14s);
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        animation: scaling  both 1s 14s;
+        
     }
     &--stase {
-        animation: scaling  both 1s 11s;
+        @include scaling-animation(11s);
     }
     &--comp {
-        animation: scaling  both 1s 13s;
+        @include scaling-animation(13s);
     }
     p {
         margin-bottom: 35px;
@@ -63,11 +59,10 @@ main h1 {
 }
 
 .progress {
-    // min-width: 300px;
-    width: 350px;
+    @include scaling-animation(8.7s);
+    width: 330px;
     height: 30px;
     border: 2px solid black;
-    animation: scaling  both 1s 8.7s;
     padding: 4px;
     &__bar {
         width: 100%;
@@ -86,29 +81,24 @@ main h1 {
     }
 }
 .card-error {    
+    @include display-card;
     position: absolute;
     top: 20px;
     right: 0;
     left: 0;
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-shadow: 1px 6px 6px $colour-hot-light;
     &__neuro {
-      margin-top: 20px;
+    @include scaling-animation(25s);
       font-size: 70px;
-      text-shadow: 2px 2px 2px #CE5937;
-      animation: scaling   both 1s 26s;
+      text-shadow: 2px 2px 2px $colour-hot;
     }
     &__forma {
-        margin-top: 20px;
-        text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
-        animation: scaling  both 1s 27s;
+        @include scaling-animation(26.3s);
     }
     &__envoie {
-        margin-top: 20px;
-        text-shadow: 1px 6px 6px rgba(195,81,81,0.6);
-        animation: scaling   both 1s 28.3s;
+        @include scaling-animation(28s);
     }
+}
+p {
+    margin-top: 20px;
 }

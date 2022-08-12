@@ -1,0 +1,28 @@
+#contact {
+    position: relative;
+}
+    h2.contact {
+        @include scaling-animation(0.4s);
+        text-align: center;
+        margin: 20px;
+        text-decoration : underline;
+    }
+  .about-me {
+    @include display-card
+  }  
+
+.card-contact{ 
+    @include scaling-animation(1s);
+    // border: 1px solid black;
+    text-align: center;
+    width: 600px;
+    margin: 60px auto;
+    display: flex; flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: 2px 2px 2px grey;
+    img {
+        border: 2px black solid;
+        box-shadow: 4px 4px 4px grey;
+    }
+}

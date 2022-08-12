@@ -19,10 +19,16 @@ button {
 }
     .btn {
         &--profil{
-            animation: scaling   both 1s 11.5s;
+            @include scaling-animation(11.5s);
+            // animation: scaling   both 1s 11.5s;
         }
         &--contact{
-            animation: scaling  both 1s 30s;
+            @include scaling-animation(30s);
+            // animation: scaling  both 1s 30s;
+        }
+        &--again {
+            @include scaling-animation(3s);
+
         }
     }
 

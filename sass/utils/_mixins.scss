@@ -2,8 +2,8 @@
     @include animated-background;
     border-radius: 50%;
     position: absolute;
-    
 }
+
 @mixin animated-background {
     background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
     background-size: 180% 180%;
@@ -11,5 +11,16 @@
 }
 
 @mixin scaling-animation($scaling-delay){
-     animation: scaling  both 1s $scaling-delay;
+    animation: scaling  both 1s $scaling-delay;
     }
+
+@mixin scaling-reverse($scaling-reverse-delay){
+    animation: scaling reverse both 1s $scaling-reverse-delay;
+    }
+
+ @mixin display-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
