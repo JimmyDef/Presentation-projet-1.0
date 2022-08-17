@@ -16,7 +16,6 @@ main {
     justify-content: center;
     margin: 60px;
     text-shadow: 2px 2px 2px grey;
-
 }
 
 .card-cryo {
@@ -30,10 +29,9 @@ main {
     width: 500px;
     &__comp {
         @include scaling-animation(14s);
-        height: 50px;
         @include display-card;
+        height: 50px;
         justify-content: space-between;
-        
     }
     &--stase {
         @include scaling-animation(11s);
@@ -43,7 +41,7 @@ main {
     }
     p {
         margin-bottom: 35px;
-        text-shadow: 1px 6px 6px rgba(31, 232, 247, 0.849);
+        text-shadow: 1px 6px 6px $colour-cold;
     }
 }
 
