@@ -1,32 +1,39 @@
 
 .opening {    
-    margin-top: 20px;
+    margin: 20px ;
     @include display-card;
+    flex-direction: column;
     &__intro{
         margin-top: 20px;
         text-shadow: 1px 6px 6px $colour-hot-light;
         &--alerte {
             @include scaling-animation(6s);
-            font-size: 70px;
+            font-size: 60px;
             text-shadow: 2px 2px 2px $colour-hot;
         }
         &--fluctu {
             @include scaling-animation(7.3s);
         }
         &--agent {
-
             @include scaling-animation(9s);
         }
 }
 }
 
-@media screen and (max-width: 573px) {
-    // .card {
-    //     width: 100%;
-    //     // justify-content: space-between;
-    //     }
-    
-    img {
-        width: 30%;
+h2 {
+    text-align: center;
+    margin: 20px;
+    text-decoration : underline;
+}
+
+img {
+    margin: 30px;
+    border: 2px black solid;
+    box-shadow: 4px 4px 4px grey;
+}
+
+@media screen and (max-width: 630px) {
+    .opening__intro--alerte {
+        font-size: 50px;
     }
 }

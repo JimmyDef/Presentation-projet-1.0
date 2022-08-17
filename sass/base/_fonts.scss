@@ -9,6 +9,48 @@
          url('/public/polices/hhenum-regular-webfont.svg#hhenumregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+body {
+    font-family: 'hhenumregular';
+    font-size: 50px;
+}
 
+header h1 {
+    font-size: 100px;
+    color: white;
+}
+button {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+    margin: 20px;
+}
+
+.card-cryo__comp {
+    font-size: 35px;
+}
+
+@media screen and (max-width: 630px) {
+    body {
+        font-size: 34px;
+    }
+    header {
+        h1{
+            font-size: 80px;
+        }
+    }
+    h2 {
+        font-size: 34px;
+        margin: 10px; 
+    }
+
+    .card-cryo__comp {
+        font-size: 30px;
+    }
 }

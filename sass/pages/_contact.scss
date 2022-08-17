@@ -1,0 +1,30 @@
+#contact {
+    position: relative;
+}
+    h2.contact {
+        @include scaling-animation(0.4s);
+    }
+    
+  .about-me {
+    @include display-card;
+    flex-direction: column;
+  }  
+
+.card-contact{ 
+    @include scaling-animation(1s);
+    @include display-card;
+    flex-direction: row;
+    text-shadow: 2px 2px 2px grey;
+}
+
+@media screen and (max-width: 630px) {
+    .opening__intro--alerte {
+        font-size: 45px;
+    }
+    .card-contact{ 
+        flex-direction: column;
+        img {
+        width: 20vw;
+        }
+    }
+}   

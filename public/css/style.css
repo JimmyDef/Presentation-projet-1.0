@@ -152,18 +152,25 @@ h2 {
   font-size: 35px;
 }
 
-p span {
-  text-decoration: underline;
+@media screen and (max-width: 630px) {
+  body {
+    font-size: 34px;
+  }
+  header h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 34px;
+    margin: 10px;
+  }
+  .card-cryo__comp {
+    font-size: 30px;
+  }
 }
-
-a {
-  text-decoration: none;
-}
-
 button {
-  margin-top: 50px;
   height: 50px;
   width: 280px;
+  margin: 50px;
   border-radius: 20px;
   background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
   box-shadow: 5px 5px 15px 5px #000000;
@@ -188,12 +195,11 @@ button:active {
   animation: scaling both 1s 3s;
 }
 
-@media screen and (max-width: 573px) {
+@media screen and (max-width: 630px) {
   button {
-    margin-top: 20px;
-    height: 15vw;
+    margin: 20px;
+    height: 45px;
     width: 60vw;
-    padding: 0 10px;
   }
 }
 .loading {
@@ -229,14 +235,23 @@ button:active {
   animation: scale-cercle 3 1.8s alternate forwards;
 }
 
+@media screen and (max-width: 630px) {
+  .loading {
+    top: 75px;
+  }
+}
 header {
   position: relative;
   height: 275px;
+  width: auto;
   padding-top: 50px;
   text-align: center;
   background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
   background-size: 180% 180%;
   animation: gradient-animation 10s ease infinite;
+}
+header a {
+  text-decoration: none;
 }
 
 .logo {
@@ -272,6 +287,10 @@ header {
 }
 
 @media screen and (max-width: 630px) {
+  header {
+    height: 200px;
+    padding: 10px;
+  }
   .logo {
     right: 10px;
     width: 65px;
@@ -289,11 +308,11 @@ header {
   }
 }
 .opening {
-  margin-top: 20px;
+  margin: 20px;
   text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 .opening__intro {
   margin-top: 20px;
@@ -301,7 +320,7 @@ header {
 }
 .opening__intro--alerte {
   animation: scaling both 1s 6s;
-  font-size: 70px;
+  font-size: 60px;
   text-shadow: 2px 2px 2px #CE5937;
 }
 .opening__intro--fluctu {
@@ -311,19 +330,28 @@ header {
   animation: scaling both 1s 9s;
 }
 
-@media screen and (max-width: 573px) {
-  img {
-    width: 30%;
+h2 {
+  text-align: center;
+  margin: 20px;
+  text-decoration: underline;
+}
+
+img {
+  margin: 30px;
+  border: 2px black solid;
+  box-shadow: 4px 4px 4px grey;
+}
+
+@media screen and (max-width: 630px) {
+  .opening__intro--alerte {
+    font-size: 50px;
   }
 }
 main {
   position: relative;
 }
-main h2.h-profil {
+main .h-profil {
   animation: scaling both 1s 6s;
-  text-align: center;
-  margin: 20px;
-  text-decoration: underline;
 }
 
 .profile-selected {
@@ -333,23 +361,19 @@ main h2.h-profil {
 .card-profil {
   animation: scaling both 1s 7s;
   text-align: center;
-  width: 500px;
-  margin: 60px auto;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 60px;
   text-shadow: 2px 2px 2px grey;
-}
-.card-profil img {
-  border: 2px black solid;
-  box-shadow: 4px 4px 4px grey;
 }
 
 .card-cryo {
   animation: scaling reverse both 1s 23.5s;
   position: absolute;
   margin: 0 auto;
-  top: 20px;
+  top: 0;
   right: 0;
   left: 0;
   text-align: center;
@@ -358,6 +382,7 @@ main h2.h-profil {
 .card-cryo__comp {
   animation: scaling both 1s 14s;
   height: 50px;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -399,17 +424,17 @@ main h2.h-profil {
 .card-error {
   text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   position: absolute;
-  top: 20px;
+  top: 0;
   right: 0;
   left: 0;
   text-shadow: 1px 6px 6px rgba(195, 81, 81, 0.6);
 }
 .card-error__neuro {
   animation: scaling both 1s 25s;
-  font-size: 70px;
+  font-size: 60px;
   text-shadow: 2px 2px 2px #CE5937;
 }
 .card-error__forma {
@@ -422,39 +447,70 @@ main h2.h-profil {
 p {
   margin-top: 20px;
 }
+p span {
+  text-decoration: underline;
+}
 
+@media screen and (max-width: 630px) {
+  .card-cryo {
+    width: auto;
+    margin: 10px;
+  }
+  .card-cryo p {
+    margin-bottom: 10px;
+  }
+  .card-cryo__comp {
+    height: 40px;
+  }
+  .progress {
+    width: 60vw;
+    height: 20px;
+  }
+  .card-error__neuro {
+    font-size: 40px;
+  }
+  .card-profil {
+    flex-direction: column;
+    margin: 15px;
+  }
+  .card-profil img {
+    width: 20vw;
+  }
+}
 #contact {
   position: relative;
 }
 
 h2.contact {
   animation: scaling both 1s 0.4s;
-  text-align: center;
-  margin: 20px;
-  text-decoration: underline;
 }
 
 .about-me {
   text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 .card-contact {
   animation: scaling both 1s 1s;
   text-align: center;
-  width: 600px;
-  margin: 60px auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  flex-direction: row;
   text-shadow: 2px 2px 2px grey;
 }
-.card-contact img {
-  border: 2px black solid;
-  box-shadow: 4px 4px 4px grey;
+
+@media screen and (max-width: 630px) {
+  .opening__intro--alerte {
+    font-size: 45px;
+  }
+  .card-contact {
+    flex-direction: column;
+  }
+  .card-contact img {
+    width: 20vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

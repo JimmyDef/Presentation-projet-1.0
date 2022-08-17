@@ -1,13 +1,12 @@
 
 button {
-    margin-top: 50px;
     height: 50px;
     width: 280px;
+    margin: 50px;
     border-radius: 20px;
     background: $color-gradient;
     box-shadow: 5px 5px 15px 5px #000000;
     transition: font-size 200ms  ;
-    
     &:hover {
         font-size: 22px;
         background-size: 180% 180%;
@@ -20,26 +19,22 @@ button {
     .btn {
         &--profil{
             @include scaling-animation(11.5s);
-            // animation: scaling   both 1s 11.5s;
+           
+         
         }
         &--contact{
             @include scaling-animation(30s);
-            // animation: scaling  both 1s 30s;
+     
         }
         &--again {
             @include scaling-animation(3s);
-
         }
     }
 
-
-@media screen and (max-width: 573px) {
+@media screen and (max-width: 630px) {
     button {
-        margin-top: 20px;
-        height: 15vw;
-        width: 60vw;
-        padding: 0 10px ;
-       
+        margin: 20px;
+        height: 45px;
+        width: 60vw;       
     }
-
 }

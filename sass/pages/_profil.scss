@@ -1,13 +1,8 @@
 main {
     position: relative;
-    h2.h-profil {
-        
+    .h-profil {
         @include scaling-animation(6s);
-        text-align: center;
-        margin: 20px;
-        text-decoration : underline;
-    
-} 
+    } 
 }
 
 .profile-selected {
@@ -16,24 +11,19 @@ main {
 }
 .card-profil { 
     @include scaling-animation(7s);
-    text-align: center;
-    width: 500px;
-    margin: 60px auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include display-card;
+    flex-direction: row;
+    justify-content: center;
+    margin: 60px;
     text-shadow: 2px 2px 2px grey;
-    img {
-        border: 2px black solid;
-        box-shadow: 4px 4px 4px grey;
-    }
+
 }
 
 .card-cryo {
     @include scaling-reverse(23.5s);
     position: absolute;
-    margin: 0  auto ;
-    top: 20px;
+    margin: 0 auto;
+    top: 0;
     right: 0;
     left: 0;
     text-align: center;
@@ -41,8 +31,7 @@ main {
     &__comp {
         @include scaling-animation(14s);
         height: 50px;
-        display: flex;
-        align-items: center;
+        @include display-card;
         justify-content: space-between;
         
     }
@@ -82,14 +71,15 @@ main {
 }
 .card-error {    
     @include display-card;
+    flex-direction: column;
     position: absolute;
-    top: 20px;
+    top: 0;
     right: 0;
     left: 0;
     text-shadow: 1px 6px 6px $colour-hot-light;
     &__neuro {
     @include scaling-animation(25s);
-      font-size: 70px;
+      font-size: 60px;
       text-shadow: 2px 2px 2px $colour-hot;
     }
     &__forma {
@@ -101,4 +91,36 @@ main {
 }
 p {
     margin-top: 20px;
+    span {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .card-cryo {
+        width: auto;
+        margin: 10px;
+        p {
+            margin-bottom: 10px;
+        }
+        &__comp {
+            height: 40px;
+        }
+    }
+    .progress {
+        width: 60vw;
+        height: 20px;
+    }
+    .card-error {    
+        &__neuro {
+           font-size: 40px;
+        }
+    }  
+    .card-profil{ 
+        flex-direction: column;
+        margin: 15px;
+        img {
+        width: 20vw;
+        }
+    }
 }
