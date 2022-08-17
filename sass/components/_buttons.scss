@@ -1,4 +1,3 @@
-
 button {
     height: 50px;
     width: 280px;
@@ -19,12 +18,9 @@ button {
     .btn {
         &--profil{
             @include scaling-animation(11.5s);
-           
-         
         }
         &--contact{
             @include scaling-animation(30s);
-     
         }
         &--again {
             @include scaling-animation(3s);

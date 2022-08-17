@@ -1,4 +1,3 @@
-
 .opening {    
     margin: 20px ;
     @include display-card;
@@ -35,5 +34,8 @@ img {
 @media screen and (max-width: 630px) {
     .opening__intro--alerte {
         font-size: 50px;
+    }
+    h2 {
+        margin: 10px;
     }
 }

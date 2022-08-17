@@ -143,9 +143,7 @@ button {
 }
 
 h2 {
-  text-align: center;
   font-size: 50px;
-  margin: 20px;
 }
 
 .card-cryo__comp {
@@ -161,7 +159,6 @@ h2 {
   }
   h2 {
     font-size: 34px;
-    margin: 10px;
   }
   .card-cryo__comp {
     font-size: 30px;
@@ -243,7 +240,6 @@ button:active {
 header {
   position: relative;
   height: 275px;
-  width: auto;
   padding-top: 50px;
   text-align: center;
   background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
@@ -289,7 +285,7 @@ header a {
 @media screen and (max-width: 630px) {
   header {
     height: 200px;
-    padding: 10px;
+    padding: 5px;
   }
   .logo {
     right: 10px;
@@ -346,6 +342,9 @@ img {
   .opening__intro--alerte {
     font-size: 50px;
   }
+  h2 {
+    margin: 10px;
+  }
 }
 main {
   position: relative;
@@ -381,10 +380,10 @@ main .h-profil {
 }
 .card-cryo__comp {
   animation: scaling both 1s 14s;
-  height: 50px;
   text-align: center;
   display: flex;
   align-items: center;
+  height: 50px;
   justify-content: space-between;
 }
 .card-cryo--stase {
